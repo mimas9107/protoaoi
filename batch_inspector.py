@@ -2,8 +2,9 @@ import cv2
 import numpy as np
 
 # --- Step 1: 預設參數 (需要根據 Step 2 校準結果調整) ---
-PIXEL_TO_MM_RATIO = 5.0      # 假設 1mm 實際距離對應 5.0 像素
-MIN_MM_SIZE = 50.0           # 最小合格尺寸 (mm)
+#PIXEL_TO_MM_RATIO = 5.0      # 假設 1mm 實際距離對應 5.0 像素
+PIXEL_TO_MM_RATIO=0.072647
+MIN_MM_SIZE = 40.0           # 最小合格尺寸 (mm)
 MIN_PIXEL_SIZE = MIN_MM_SIZE * PIXEL_TO_MM_RATIO # 最小合格尺寸 (像素)
 # 整個 5x5 檢測區域的預期起點和終點 (像素座標)，用於區域裁切
 ROI_START = (100, 100)
